@@ -3,10 +3,12 @@
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Personnel/PersonDirectory.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Personnel/CustomerAccount.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/CustomerManagement/MarketCatalog.java
+/Users/vartika/Downloads/PricingModel/src/main/java/ui/Supplier/SupplierJPanel.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/ProductManagement/ProductCatalog.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/OrderManagement/MasterOrderReport.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Supplier/SupplierDirectory.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/OrderManagement/MasterOrderList.java
+/Users/vartika/Downloads/PricingModel/src/main/java/ui/MainJFrame.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/MarketModel/Market.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/MarketModel/Channel.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/ProductManagement/SolutionOfferCatalog.java
@@ -17,6 +19,7 @@
 /Users/vartika/Downloads/PricingModel/src/main/java/model/CustomerManagement/CustomerDirectory.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/ProductManagement/ProductsReport.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Personnel/EmployeeProfile.java
+/Users/vartika/Downloads/PricingModel/src/main/java/ui/ProductManagement/ProductManagementJPanel.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/OrderManagement/OrderItem.java
 /Users/vartika/Downloads/PricingModel/src/main/java/ui/PricingModel.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Personnel/Profile.java
@@ -31,6 +34,7 @@
 /Users/vartika/Downloads/PricingModel/src/main/java/model/UserAccountManagement/UserAccount.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/ProductManagement/ProductSummary.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/ProductManagement/SolutionOffer.java
+/Users/vartika/Downloads/PricingModel/src/main/java/ui/LoginScreenJPanel.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/MarketModel/MarketChannelAssignment.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/Business/Business.java
 /Users/vartika/Downloads/PricingModel/src/main/java/model/OrderManagement/Order.java

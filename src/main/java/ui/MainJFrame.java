@@ -105,17 +105,17 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addComponent(mngProduct)
-                .addContainerGap(375, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
             .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(controlPanelLayout.createSequentialGroup()
                     .addGap(51, 51, 51)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(591, Short.MAX_VALUE)))
+                    .addContainerGap(523, Short.MAX_VALUE)))
             .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(controlPanelLayout.createSequentialGroup()
                     .addGap(122, 122, 122)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(520, Short.MAX_VALUE)))
+                    .addContainerGap(452, Short.MAX_VALUE)))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -127,13 +127,11 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1392, Short.MAX_VALUE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -158,13 +156,14 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     private void mngProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngProductActionPerformed
         // TODO add your handling code here:
-    ProductManagementJPanel panel = new ProductManagementJPanel(userProcessContainer, supplierDirectory );
-    userProcessContainer.add("ProductManagementJPanel", panel);
+    LoginScreenJPanel panel = new LoginScreenJPanel(userProcessContainer, supplierDirectory );
+    userProcessContainer.add("LoginScreenJPanel", panel);
     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
     layout.next(userProcessContainer);
    
        
     }//GEN-LAST:event_mngProductActionPerformed
+  
 
     /**
      * @param args the command line arguments
