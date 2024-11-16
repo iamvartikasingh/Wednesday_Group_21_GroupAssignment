@@ -4,10 +4,13 @@
  */
 package ui;
 
+import java.awt.CardLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
+import ui.Supplier.SupplierWorkAreaJPanel;
 
 /**
  *
@@ -95,7 +98,19 @@ public class LoginScreenJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
-       
+       if (selectedSupplier == null) {
+        JOptionPane.showMessageDialog(this, "Please select a supplier to login.");
+        return; // Stop if no supplier is selected
+    }
+    
+    // Create a new panel for the supplier work area
+    SupplierWorkAreaJPanel supplierWorkAreaPanel = new SupplierWorkAreaJPanel(userProcessContainer, selectedSupplier, supplierDirectory);
+    
+    // Add the panel to the user process container and switch to it
+    userProcessContainer.add("SupplierWorkAreaJPanel", supplierWorkAreaPanel);
+    CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+    layout.next(userProcessContainer);
+
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void cmbSuppliersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbSuppliersActionPerformed
