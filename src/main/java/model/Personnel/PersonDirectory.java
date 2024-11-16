@@ -17,7 +17,7 @@ public class PersonDirectory {
     
       public PersonDirectory (){
           
-       personlist = new ArrayList();
+       personlist = new ArrayList<>();
 
     }
 
