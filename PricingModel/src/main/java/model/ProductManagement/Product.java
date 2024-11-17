@@ -6,25 +6,27 @@
 package model.ProductManagement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import model.OrderManagement.OrderItem;
 
 /**
- *
- * Modified version of Product class to include methods for adjusting target prices.
+ * @author kal bugrara
  */
 public class Product {
+
     private String name;
     private int floorPrice;
     private int ceilingPrice;
     private int targetPrice;
     ArrayList<OrderItem> orderitems;
 
-    // Constructors
     public Product(int fp, int cp, int tp) {
+
         floorPrice = fp;
         ceilingPrice = cp;
         targetPrice = tp;
-        orderitems = new ArrayList<>();
+        orderitems = new ArrayList();
     }
 
     public Product(String n, int fp, int cp, int tp) {
@@ -32,29 +34,14 @@ public class Product {
         floorPrice = fp;
         ceilingPrice = cp;
         targetPrice = tp;
-        orderitems = new ArrayList<>();
+        orderitems = new ArrayList();
     }
 
-    // Method to adjust target price with respect to floor and ceiling limits
-    public void adjustTargetPrice(boolean increase) {
-        double adjustmentFactor = 0.05; // 5% adjustment factor
-        if (increase) {
-            int newTargetPrice = (int) (targetPrice * (1 + adjustmentFactor));
-            // Ensure the new target price does not exceed the ceiling price
-            targetPrice = Math.min(newTargetPrice, ceilingPrice);
-        } else {
-            int newTargetPrice = (int) (targetPrice * (1 - adjustmentFactor));
-            // Ensure the new target price does not fall below the floor price
-            targetPrice = Math.max(newTargetPrice, floorPrice);
-        }
-    }
-
-    // Existing methods
     public Product updateProduct(int fp, int cp, int tp) {
         floorPrice = fp;
         ceilingPrice = cp;
         targetPrice = tp;
-        return this; // returns itself
+        return this; //returns itself
     }
 
     public int getTargetPrice() {
@@ -65,11 +52,13 @@ public class Product {
         orderitems.add(oi);
     }
 
-    // Number of item sales above target
+    //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget() {
         int sum = 0;
         for (OrderItem oi : orderitems) {
-            if (oi.isActualAboveTarget()) sum++;
+            if (oi.isActualAboveTarget() == true) {
+                sum = sum + 1;
+            }
         }
         return sum;
     }
@@ -77,23 +66,31 @@ public class Product {
     public int getNumberOfProductSalesBelowTarget() {
         int sum = 0;
         for (OrderItem oi : orderitems) {
-            if (oi.isActualBelowTarget()) sum++;
+            if (oi.isActualBelowTarget() == true) {
+                sum = sum + 1;
+            }
         }
         return sum;
     }
 
     public boolean isProductAlwaysAboveTarget() {
+
         for (OrderItem oi : orderitems) {
-            if (!oi.isActualAboveTarget()) return false; // Return false if any item is below target
+            if (oi.isActualAboveTarget() == false) {
+                return false; //
+            }
         }
         return true;
     }
+    //calculates the revenues gained or lost (in relation to the target)
+    //For example, if target is at $2000 and actual is $2500 then revenue gained
+    // is $500 above the expected target. If the actual is $1800 then the lose will be $200
+    // Add all these difference to get the total including wins and loses
 
-    // Calculates the revenues gained or lost in relation to the target
     public int getOrderPricePerformance() {
         int sum = 0;
         for (OrderItem oi : orderitems) {
-            sum += oi.calculatePricePerformance(); // Positive and negative values       
+            sum = sum + oi.calculatePricePerformance();     //positive and negative values       
         }
         return sum;
     }
@@ -101,7 +98,7 @@ public class Product {
     public int getSalesVolume() {
         int sum = 0;
         for (OrderItem oi : orderitems) {
-            sum += oi.getOrderItemTotal(); // Positive and negative values       
+            sum = sum + oi.getOrderItemTotal();     //positive and negative values       
         }
         return sum;
     }
@@ -123,13 +120,48 @@ public class Product {
         return ceilingPrice;
     }
 
-    // Optional utility method to provide a performance summary
-    public String getPerformanceSummary() {
-        return String.format("Product: %s | Target Price: %d | Floor Price: %d | Ceiling Price: %d | Sales Volume: %d",
-                name, targetPrice, floorPrice, ceilingPrice, getSalesVolume());
+    public String getProductName() {
+        return name;
     }
 
-    public Object getName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int getRecommendedPrice() {
+        int price = targetPrice;
+//        map to see how many products are sold at a price
+
+        HashMap<Integer, Integer> pricePerformance = new HashMap<>();
+        for (OrderItem oi : orderitems) {
+            price = oi.getActualPrice();
+            pricePerformance.put(price, pricePerformance.getOrDefault(price, 0) + oi.getQuantity());
+        }
+
+//        assuming that the price is the one that is sold the most
+        int max = 0;
+        for (Integer key : pricePerformance.keySet()) {
+            if (pricePerformance.get(key) > max) {
+                max = pricePerformance.get(key);
+                price = key;
+            }
+        }
+        return price;
+    }
+
+    public ArrayList<OrderItem> getOrderitems() {
+        return orderitems;
+    }
+
+    public int getQuantity() {
+        int sum = 0;
+        for (OrderItem oi : orderitems) {
+            sum = sum + oi.getQuantity();
+        }
+        return sum;
+    }
+
+    public int getOrderPricePerformanceIfRecommendedPrice() {
+        int sum = 0;
+        for (OrderItem oi : orderitems) {
+            sum = sum + oi.calculatePricePerformanceIfRecommendedPrice();     //positive and negative values
+        }
+        return sum;
     }
 }

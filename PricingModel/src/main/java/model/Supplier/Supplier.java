@@ -1,35 +1,41 @@
 /*
- * Supplier class with integrated price adjustments, simulations, and browsing functionalities.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package model.Supplier;
 
 import java.util.ArrayList;
-import model.ProductManagement.Product;
+
 import model.ProductManagement.ProductCatalog;
 import model.ProductManagement.ProductSummary;
 import model.ProductManagement.ProductsReport;
 
+/**
+ * @author kal bugrara
+ */
 public class Supplier {
     String name;
-    ProductCatalog productCatalog;
-    ProductsReport productsReport;
+    ProductCatalog productcatalog;
+    ProductsReport productsreport;
 
-    // Constructor
     public Supplier(String n) {
         name = n;
-        productCatalog = new ProductCatalog("software");
+        productcatalog = new ProductCatalog("software");
+
     }
 
-    // Prepare a report for product performance
     public ProductsReport prepareProductsReport() {
-        productsReport = productCatalog.generatProductPerformanceReport();
-        return productsReport;
+
+        productsreport = productcatalog.generatProductPerformanceReport();
+        return productsreport;
     }
 
-    // Get products that are always above the target
     public ArrayList<ProductSummary> getProductsAlwaysAboveTarget() {
-        if (productsReport == null) productsReport = prepareProductsReport();
-        return productsReport.getProductsAlwaysAboveTarget();
+
+        if (productsreport == null) productsreport = prepareProductsReport();
+        return productsreport.getProductsAlwaysAboveTarget();
+
     }
 
     public String getName() {
@@ -37,62 +43,19 @@ public class Supplier {
     }
 
     public ProductCatalog getProductCatalog() {
-        return productCatalog;
+        return productcatalog;
     }
+    //add supplier product ..
 
-    // Method to browse and analyze product performance
-    public void browseProductPerformance() {
-        System.out.println("Browsing Product Performance for Supplier: " + name);
-        for (Product product : productCatalog.getProducts()) {
-            System.out.printf("Product: %s | Target Price: %d | Sales Volume: %d | Sales Above Target: %d | Sales Below Target: %d%n",
-                product.toString(),
-                product.getTargetPrice(),
-                product.getSalesVolume(),
-                product.getNumberOfProductSalesAboveTarget(),
-                product.getNumberOfProductSalesBelowTarget()
-            );
-        }
-    }
-
-    // Method to browse and adjust product prices based on their performance
-    public void browseAndAdjustPrices() {
-        for (Product product : productCatalog.getProducts()) {
-            if (product.getNumberOfProductSalesBelowTarget() > product.getNumberOfProductSalesAboveTarget()) {
-                product.adjustTargetPrice(false); // Lower the target price
-                System.out.printf("Lowered target price for %s to %d%n", product.toString(), product.getTargetPrice());
-            } else if (product.getNumberOfProductSalesAboveTarget() > product.getNumberOfProductSalesBelowTarget()) {
-                product.adjustTargetPrice(true); // Raise the target price
-                System.out.printf("Increased target price for %s to %d%n", product.toString(), product.getTargetPrice());
-            }
-        }
-    }
-
-    // Method to calculate total revenue
-    public double calculateTotalRevenue() {
-        double totalRevenue = 0;
-        for (Product product : productCatalog.getProducts()) {
-            totalRevenue += product.getSalesVolume() * product.getTargetPrice();
-        }
-        return totalRevenue;
-    }
-
-    // Method to run a price simulation
-    public void runPriceSimulation() {
-        double previousRevenue = calculateTotalRevenue();
-        double currentRevenue = previousRevenue;
-
-        do {
-            previousRevenue = currentRevenue;
-            browseAndAdjustPrices(); // Adjust prices based on performance
-            currentRevenue = calculateTotalRevenue();
-            System.out.printf("New total revenue after adjustment: %.2f%n", currentRevenue);
-        } while (currentRevenue > previousRevenue);
-
-        System.out.println("Profit margins optimized for supplier: " + name);
-    }
-
+    //update supplier product ...
     @Override
     public String toString() {
         return name;
+
+    }
+
+    public int getPricePerformance() {
+        prepareProductsReport();
+        return productsreport.getPricePerformance();
     }
 }

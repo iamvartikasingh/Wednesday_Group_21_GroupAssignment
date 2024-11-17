@@ -24,8 +24,29 @@ public class Order {
     MarketChannelAssignment mca;
     String status;
 
-    public Order(){}
-    
+    public Order() {
+    }
+
+    public ArrayList<OrderItem> getOrderitems() {
+        return orderitems;
+    }
+
+    public CustomerProfile getCustomer() {
+        return customer;
+    }
+
+    public SalesPersonProfile getSalesperson() {
+        return salesperson;
+    }
+
+    public MarketChannelAssignment getMca() {
+        return mca;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
     public Order(CustomerProfile cp) {
         orderitems = new ArrayList();
         customer = cp;
@@ -34,19 +55,20 @@ public class Order {
         status = "in process";
     }
 
-
     public Order(CustomerProfile cp, SalesPersonProfile ep) {
         orderitems = new ArrayList();
         customer = cp;
         salesperson = ep;
         customer.addCustomerOrder(this); //we link the order to the customer
-        salesperson.addSalesOrder(this);  
+        salesperson.addSalesOrder(this);
     }
+
     public OrderItem newOrderItem(Product p, int actualprice, int q) {
         OrderItem oi = new OrderItem(p, actualprice, q);
         orderitems.add(oi);
         return oi;
     }
+
     //order total is the sumer of the order item totals
     public int getOrderTotal() {
         int sum = 0;
@@ -73,21 +95,55 @@ public class Order {
         }
         return sum;
     }
-    
+
     //sum all the item targets and compare to the total of the order 
-    public boolean isOrderAboveTotalTarget(){
+    public boolean isOrderAboveTotalTarget() {
         int sum = 0;
-        for (OrderItem oi: orderitems){
+        for (OrderItem oi : orderitems) {
             sum = sum + oi.getOrderItemTargetTotal(); //product targets are added
         }
-        if(getOrderTotal()>sum) {return true;}
-        else {return false;}
-        
+        if (getOrderTotal() > sum) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
-public void CancelOrder(){
-    status = "Cancelled";
-}
-public void Submit(){
-    status = "Submitted";
-}
+
+    public void CancelOrder() {
+        status = "Cancelled";
+    }
+
+    public void Submit() {
+        status = "Submitted";
+    }
+
+    public ArrayList<OrderItem> getOrderItemList() {
+        return orderitems;
+    }
+
+    public void removeOrderItem(OrderItem oi) {
+        orderitems.remove(oi);
+    }
+
+    public void modifyQuantity(OrderItem oi, int newQuantity) {
+        oi.setQuantity(newQuantity);
+    }
+
+    public boolean isOrderBelowTotalTarget() {
+        int sum = 0;
+        for (OrderItem oi : orderitems) {
+            sum = sum + oi.getOrderItemTargetTotal(); //product targets are added
+        }
+        if (getOrderTotal() < sum) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    @Override
+    public String toString(){
+        return customer.getCustomerId();
+    }
 }

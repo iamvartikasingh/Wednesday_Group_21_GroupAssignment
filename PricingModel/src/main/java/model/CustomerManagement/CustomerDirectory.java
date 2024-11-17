@@ -11,7 +11,6 @@ import model.Business.Business;
 import model.Personnel.Person;
 
 /**
- *
  * @author kal bugrara
  */
 public class CustomerDirectory {
@@ -19,9 +18,9 @@ public class CustomerDirectory {
     Business business;
     ArrayList<CustomerProfile> customerlist;
 
-    public CustomerDirectory(Business aThis) {
+    public CustomerDirectory(Business d) {
 
-        
+        business = d;
         customerlist = new ArrayList();
 
     }
@@ -41,16 +40,21 @@ public class CustomerDirectory {
                 return sp;
             }
         }
-            return null; //not found after going through the whole list
-         }
-        public CustomersReport generatCustomerPerformanceReport(){
+        return null; //not found after going through the whole list
+    }
+
+    public CustomersReport generatCustomerPerformanceReport() {
         CustomersReport customersreport = new CustomersReport();
-    
-        for(CustomerProfile cp: customerlist){
-            
+
+        for (CustomerProfile cp : customerlist) {
+
             CustomerSummary cs = new CustomerSummary(cp);
             customersreport.addCustomerSummary(cs);
         }
-        return customersreport; 
-    } 
+        return customersreport;
+    }
+
+    public ArrayList<CustomerProfile> getCustomerList() {
+        return customerlist;
+    }
 }

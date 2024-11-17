@@ -1,19 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model.ProductManagement;
 
 import java.util.ArrayList;
 
 /**
- * Represents a report summarizing product performance.
+ *
+ * @author kal bugrara
  */
 public class ProductsReport {
 
     ArrayList<ProductSummary> productsummarylist;
 
     public ProductsReport() {
-        productsummarylist = new ArrayList<>();
+        productsummarylist = new ArrayList();
     }
 
     public void addProductSummary(ProductSummary ps) {
+
         productsummarylist.add(ps);
     }
 
@@ -22,40 +29,37 @@ public class ProductsReport {
 
         for (ProductSummary ps : productsummarylist) {
             if (currenttopproduct == null) {
-                currenttopproduct = ps; // initial step
+                currenttopproduct = ps; // initial step 
             } else if (ps.getNumberAboveTarget() > currenttopproduct.getNumberAboveTarget()) {
-                currenttopproduct = ps; // we have a new higher total
+                currenttopproduct = ps; //we have a new higher total
             }
+
         }
         return currenttopproduct;
     }
 
     public ArrayList<ProductSummary> getProductsAlwaysAboveTarget() {
-        ArrayList<ProductSummary> productsalwaysabovetarget = new ArrayList<>();
+        ArrayList<ProductSummary> productsalwaysabovetarget = new ArrayList(); //temp array list
 
         for (ProductSummary ps : productsummarylist) {
-            if (ps.isProductAlwaysAboveTarget()) {
+            if (ps.isProductAlwaysAboveTarget() == true) {
                 productsalwaysabovetarget.add(ps);
             }
         }
+
         return productsalwaysabovetarget;
     }
 
-    public void generateDetailedReport(ArrayList<Product> products) {
-        System.out.println("Detailed Product Performance Report:");
-        System.out.printf("%-20s %-15s %-15s %-15s %-20s %-20s %-15s%n", 
-            "Product Name", "Target Price", "Sales Volume", "Above Target", "Below Target", "Price Performance", "Revenue");
+    public ArrayList<ProductSummary> getProductSummaryList() {
+        return productsummarylist;
+    }
 
+    public int getPricePerformance() {
+        int sum = 0;
         for (ProductSummary ps : productsummarylist) {
-            Product product = ps.getSubjectProduct(); // Assuming a getter for the product
-            System.out.printf("%-20s %-15d %-15d %-15d %-20d %-20d %-15d%n", 
-                product.toString(), 
-                product.getTargetPrice(), 
-                ps.getSalesRevenues(), 
-                ps.getNumberAboveTarget(), 
-                ps.getNumberBelowTarget(), 
-                 ps.getProductPricePerformance(), 
-                ps.getSalesRevenues());
+            System.out.println("Product: " + ps.getProductName() + " Price Performance: " + ps.getProductPricePerformance());
+            sum = sum + ps.getProductPricePerformance();
         }
+        return sum;
     }
 }

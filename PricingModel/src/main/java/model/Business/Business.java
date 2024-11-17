@@ -9,21 +9,23 @@ import java.util.ArrayList;
 
 import model.CustomerManagement.ChannelCatalog;
 import model.CustomerManagement.CustomerDirectory;
+import model.CustomerManagement.CustomerProfile;
 import model.CustomerManagement.MarketCatalog;
 import model.MarketingManagement.MarketingPersonDirectory;
 import model.OrderManagement.MasterOrderList;
 import model.Personnel.EmployeeDirectory;
+import model.Personnel.Person;
 import model.Personnel.PersonDirectory;
 import model.ProductManagement.ProductSummary;
 import model.ProductManagement.ProductsReport;
 import model.ProductManagement.SolutionOfferCatalog;
 import model.SalesManagement.SalesPersonDirectory;
+import model.SalesManagement.SalesPersonProfile;
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
 import model.UserAccountManagement.UserAccountDirectory;
 
 /**
- *
  * @author kal bugrara
  */
 public class Business {
@@ -68,6 +70,7 @@ public class Business {
     public UserAccountDirectory getUserAccountDirectory() {
         return useraccountdirectory;
     }
+
     public MarketingPersonDirectory getMarketingPersonDirectory() {
         return marketingpersondirectory;
     }
@@ -109,8 +112,12 @@ public class Business {
     public MasterOrderList getMasterOrderList() {
         return masterorderlist;
     }
-        public EmployeeDirectory getEmployeeDirectory() {
+
+    public EmployeeDirectory getEmployeeDirectory() {
         return employeedirectory;
     }
 
+    public MasterOrderList getSalesPersonOrderList(SalesPersonProfile salesPersonProfile) {
+        return masterorderlist.getSalesPersonOrderList(salesPersonProfile);
+    }
 }

@@ -74,12 +74,14 @@ public class MainJFrame extends javax.swing.JFrame {
         Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Login.setText("Login");
 
+        txtUserName.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         txtUserName.setText("sam");
 
+        txtPassword.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         txtPassword.setText("sam123");
 
         btnLogin.setBackground(new java.awt.Color(0, 102, 102));
-        btnLogin.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btnLogin.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, jLabel2});

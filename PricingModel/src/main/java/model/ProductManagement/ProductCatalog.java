@@ -8,44 +8,35 @@ package model.ProductManagement;
 import java.util.ArrayList;
 
 /**
- *
  * @author kal bugrara
  */
 public class ProductCatalog {
 
     String type;
     ArrayList<Product> products; //list of products initially empty
-    
-    public ArrayList<Product> getProducts() {
-    return products;
-}
-
-public void browseProductPerformance() {
-    for (Product product : products) {
-        System.out.println(product.getPerformanceSummary());
-    }
-}
 
     public ProductCatalog(String n) {
         type = n;
-         products = new ArrayList();  ///create the list of elements otherwise it is null
+        products = new ArrayList();  ///create the list of elements otherwise it is null
     }
-// new ProductCatalog(); or new ProductCatalog("Printers");
-    public ProductCatalog(    ) {
+
+    // new ProductCatalog(); or new ProductCatalog("Printers");
+    public ProductCatalog() {
         type = "unknown";
         products = new ArrayList();
     }
+
     public Product newProduct(int fp, int cp, int tp) {
         Product p = new Product(fp, cp, tp);
         products.add(p);
         return p;
     }
+
     public Product newProduct(String n, int fp, int cp, int tp) {
-        Product p = new Product(n,fp, cp, tp);
+        Product p = new Product(n, fp, cp, tp);
         products.add(p);
         return p;
     }
-    
 
     public ProductsReport generatProductPerformanceReport() {
         ProductsReport productsreport = new ProductsReport();
@@ -58,15 +49,8 @@ public void browseProductPerformance() {
         return productsreport;
     }
 
-    public ArrayList<Product> getProductList(){
+    public ArrayList<Product> getProductList() {
         return products;
-    }
-
-    public void addProduct(Product product) {
-        if (products == null) {
-        products = new ArrayList<>();
-    }
-    products.add(product);
     }
 
 }

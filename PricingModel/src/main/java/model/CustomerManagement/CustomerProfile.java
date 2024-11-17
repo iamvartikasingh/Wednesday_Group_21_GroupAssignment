@@ -35,6 +35,11 @@ public class CustomerProfile {
         //for each order in the customer orderlist 
         //calculate order price performance and add it to the sum
 
+         int sum = 0;
+        for (Order o : orders) {
+            sum = sum + o.getOrderPricePerformance();
+        }
+        
         return 0;}
  
     public int    getNumberOfOrdersAboveTotalTarget(){
@@ -48,7 +53,12 @@ public class CustomerProfile {
         
         return sum;}
     
-    public int getNumberOfOrdersBelowTotalTarget(){return 0;}
+    public int getNumberOfOrdersBelowTotalTarget(){int sum = 0;
+        for (Order o : orders) {
+            if (o.isOrderBelowTotalTarget()) sum = sum + 1;
+        }
+
+        return sum;}
          //for each order in the customer order list 
         //calculate if order is negative
         //if yes then add 1 to total 
@@ -66,10 +76,12 @@ public class CustomerProfile {
     public String toString(){
         return person.getPersonId();
     }
-        public String getCustomerId(){
+    
+    public String getCustomerId(){
         return person.getPersonId();
     }
-            public Person getPerson(){
+    
+    public Person getPerson(){
         return person;
     }
         

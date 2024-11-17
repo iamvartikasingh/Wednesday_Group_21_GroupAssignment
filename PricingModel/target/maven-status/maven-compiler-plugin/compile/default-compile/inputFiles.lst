@@ -1,37 +1,46 @@
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Business\Business.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\CustomerDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\Profile.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\OrderManagement\MasterOrderReport.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\ProductCatalog.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\UserAccountManagement\UserAccount.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\ProductsReport.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Supplier\Supplier.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\ProductSummary.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\PersonDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\OrderManagement\Order.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\CustomersReport.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\UserAccountManagement\UserAccountDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\OrderManagement\MasterOrderList.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\Person.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\ui\MainJFrame.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Supplier\SupplierDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\OrderManagement\OrderSummary.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\EmployeeDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\CustomerSummary.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\Product.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\MarketModel\Market.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\SalesManagement\SalesPersonProfile.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\MarketCatalog.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\MarketingManagement\MarketingPersonDirectory.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\SolutionOffer.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\OrderManagement\OrderItem.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\CustomerProfile.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\MarketModel\Channel.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Business\ConfigureABusiness.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\CustomerManagement\ChannelCatalog.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\MarketModel\MarketChannelAssignment.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\ProductManagement\SolutionOfferCatalog.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\EmployeeProfile.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\Personnel\CustomerAccount.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\MarketingManagement\MarketingPersonProfile.java
-C:\Users\DELL\Documents\AED group project\Wednesday_Group_21_GroupAssignment\PricingModel\src\main\java\model\SalesManagement\SalesPersonDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\Marketing\OrderListJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\MarketingManagement\MarketingPersonDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\SalesPerson\SalesWorkAreaJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\CustomerAccount.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\MarketModel\Market.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\MarketingManagement\MarketingPersonProfile.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\OrderManagement\OrderSummary.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\PersonDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\OrderManagement\Order.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\ProductCatalog.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Business\Business.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\Profile.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\ProductSummary.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\UserAccountManagement\UserAccountDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\MainJFrame.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Supplier\Supplier.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\OrderManagement\OrderItem.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\SalesPerson\OrderListJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\CustomerSummary.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\Person.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\SalesAnalytics\SupplierAnalyticsJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\SalesPerson\AddOrderJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\SolutionOffer.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\CustomersReport.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\MarketCatalog.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\SalesManagement\SalesPersonProfile.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\EmployeeProfile.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Supplier\SupplierDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\OrderManagement\MasterOrderReport.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\UserAccountManagement\UserAccount.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Business\ConfigureABusiness.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\Marketing\UpdateTargetPriceJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\SolutionOfferCatalog.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\CustomerDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\PricingModel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\SalesPerson\ManageSuppliersJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\SalesManagement\SalesPersonDirectory.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\CustomerProfile.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\ui\Marketing\MarketingHomeJPanel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\CustomerManagement\ChannelCatalog.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\MarketModel\MarketChannelAssignment.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\ProductsReport.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\OrderManagement\MasterOrderList.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\MarketModel\Channel.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\ProductManagement\Product.java
+C:\Users\DELL\Desktop\Application engineering\JNJ_AED_Assignment_5-main\PricingModel\src\main\java\model\Personnel\EmployeeDirectory.java
