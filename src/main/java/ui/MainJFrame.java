@@ -4,35 +4,31 @@
  */
 package ui;
 
-import java.awt.CardLayout;
-import java.awt.Component;
 import model.Business.Business;
 import model.Business.ConfigureABusiness;
-import ui.ProductManagement.ProductManagementJPanel;
-import model.ProductManagement.ProductCatalog;
-import model.ProductManagement.ProductsReport;
-import model.Supplier.Supplier;
-import model.Supplier.SupplierDirectory;
+import model.UserAccountManagement.UserAccount;
+import model.UserAccountManagement.UserAccountDirectory;
+import ui.SalesPerson.SalesWorkAreaJPanel;
+
+import javax.swing.*;
+import java.awt.*;
+import ui.Marketing.MarketingHomeJPanel;
+
 /**
  *
- * @author vartika
+ * @author DELL
  */
 public class MainJFrame extends javax.swing.JFrame {
 
-    private SupplierDirectory supplierDirectory;
- 
     /**
      * Creates new form MainJFrame
      */
-     private Business business;
-
-    public MainJFrame() {
-        this.business = ConfigureABusiness.initialize();
-   
-       initComponents();
-       this.supplierDirectory= new SupplierDirectory();
-       
-         createExampleSupplierData();
+    static Business business;
+    public MainJFrame(Business business) {
+        initComponents();
+        MainJFrame.business = business;
+        setSize(1000, 800);
+        setResizable(false);
     }
 
     /**
@@ -44,126 +40,138 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        splitPane = new javax.swing.JSplitPane();
-        controlPanel = new javax.swing.JPanel();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        CardSequencePanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        mngProduct = new javax.swing.JButton();
-        userProcessContainer = new javax.swing.JPanel();
+        Login = new javax.swing.JLabel();
+        txtUserName = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JTextField();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        splitPane.setDividerLocation(200);
+        jSplitPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jSplitPane1.setDividerLocation(200);
 
-        controlPanel.setBackground(new java.awt.Color(255, 255, 255));
+        CardSequencePanel.setBackground(new java.awt.Color(204, 204, 255));
+        CardSequencePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CardSequencePanel.setLayout(new java.awt.CardLayout());
+        jSplitPane1.setRightComponent(CardSequencePanel);
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setText("Pricing Model");
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
-        jLabel2.setText("Welcome");
+        jLabel1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Admin Username");
 
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel3.setText("to");
+        jLabel2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Password");
 
-        mngProduct.setText("Start >>");
-        mngProduct.addActionListener(new java.awt.event.ActionListener() {
+        Login.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Login.setText("Login");
+
+        txtUserName.setText("sam");
+
+        txtPassword.setText("sam123");
+
+        btnLogin.setBackground(new java.awt.Color(0, 102, 102));
+        btnLogin.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mngProductActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
-        controlPanel.setLayout(controlPanelLayout);
-        controlPanelLayout.setHorizontalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(controlPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(controlPanelLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(mngProduct)))
-                .addContainerGap(134, Short.MAX_VALUE))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(33, 33, 33)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(138, Short.MAX_VALUE)))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(43, 43, 43)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                .addComponent(txtUserName, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(33, 33, 33))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        controlPanelLayout.setVerticalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(mngProduct)
-                .addContainerGap(307, Short.MAX_VALUE))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(51, 51, 51)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(523, Short.MAX_VALUE)))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(122, 122, 122)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(452, Short.MAX_VALUE)))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(Login)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
-        splitPane.setLeftComponent(controlPanel);
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, jLabel2});
 
-        userProcessContainer.setLayout(new java.awt.CardLayout());
-        splitPane.setRightComponent(userProcessContainer);
+        jSplitPane1.setLeftComponent(jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jSplitPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
- private void createExampleSupplierData() {
-        Supplier supplier = new Supplier("Example Supplier");
-        supplier.getProductCatalog().newProduct("Product A", 100, 200, 150);
-        supplier.getProductCatalog().newProduct("Product B", 50, 150, 100);
-        supplier.getProductCatalog().newProduct("Product C", 30, 130, 80);
 
-        // Add supplier to the business
-        business.getSupplierDirectory().getSuplierList().add(supplier);
-
-        // Run initial report and simulation
-        System.out.println("Initial Product Performance Report:");
-        supplier.prepareProductsReport();
-        System.out.println("\nRunning Price Simulation...");
-        supplier.runPriceSimulation();
-        System.out.println("\nFinal Product Performance Report:");
-        ProductsReport finalReport = supplier.prepareProductsReport();
-        finalReport.generateDetailedReport(supplier.getProductCatalog().getProducts());
-    }
-    private void mngProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngProductActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-    LoginScreenJPanel panel = new LoginScreenJPanel(userProcessContainer, supplierDirectory );
-    userProcessContainer.add("LoginScreenJPanel", panel);
-    CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-    layout.next(userProcessContainer);
-   
-       
-    }//GEN-LAST:event_mngProductActionPerformed
-  
+        String userName = txtUserName.getText();
+        String password = txtPassword.getText();
+        UserAccount userAccount =  business.getUserAccountDirectory().AuthenticateUser(userName, password);
+        if(userAccount == null) {
+            JOptionPane.showMessageDialog(this, "Invalid Credentials");
+        }
+        else {
+            if(userAccount.getRole().equals("Sales")) {
+                SalesWorkAreaJPanel salesJPanel = new SalesWorkAreaJPanel(CardSequencePanel, business, userAccount);
+                CardSequencePanel.add("SalesWorkAreaJPanel", salesJPanel);
+                CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
+                layout.next(CardSequencePanel);
+            }
+            if(userAccount.getRole().equals("Marketing")) {
+                MarketingHomeJPanel marketingHomeJPanel = new MarketingHomeJPanel(CardSequencePanel, business, userAccount);
+                CardSequencePanel.add("MarketingHomeJPanel", marketingHomeJPanel);
+                CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
+                layout.next(CardSequencePanel);
+            }
+        }
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,18 +203,20 @@ public class MainJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainJFrame().setVisible(true);
+                new MainJFrame(business).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel controlPanel;
+    private javax.swing.JPanel CardSequencePanel;
+    private javax.swing.JLabel Login;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JButton mngProduct;
-    private javax.swing.JSplitPane splitPane;
-    private javax.swing.JPanel userProcessContainer;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }
