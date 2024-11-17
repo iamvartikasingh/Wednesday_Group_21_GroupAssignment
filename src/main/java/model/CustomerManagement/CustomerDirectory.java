@@ -19,9 +19,9 @@ public class CustomerDirectory {
     Business business;
     ArrayList<CustomerProfile> customerlist;
 
-    public CustomerDirectory(Business d) {
+    public CustomerDirectory(Business aThis) {
 
-        business = d;
+        
         customerlist = new ArrayList();
 
     }

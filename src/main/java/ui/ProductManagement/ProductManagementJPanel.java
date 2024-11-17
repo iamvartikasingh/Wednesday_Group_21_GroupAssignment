@@ -4,36 +4,91 @@
  */
 package ui.ProductManagement;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.List;
+import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
+
+
 import model.ProductManagement.Product;
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
 
+
+import model.ProductManagement.*;
+import model.Supplier.Supplier;
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author vartika
  */
 public class ProductManagementJPanel extends javax.swing.JPanel {
 
+    private Supplier supplier;
+    private JTable tableProduct;
+
+    public ProductManagementJPanel(Supplier supplier) {
+        this.supplier = supplier;
+        initComponents();
+        populateTable();
+    }
+
+    private void initComponents() {
+        setLayout(new BorderLayout());
+
+        JButton btnBrowsePerformance = new JButton("Browse Product Performance");
+        JButton btnAdjustPrices = new JButton("Adjust Prices");
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(btnBrowsePerformance);
+        buttonPanel.add(btnAdjustPrices);
+        add(buttonPanel, BorderLayout.NORTH);
+
+        tableProduct = new JTable();
+        JScrollPane scrollPane = new JScrollPane(tableProduct);
+        add(scrollPane, BorderLayout.CENTER);
+
+        btnBrowsePerformance.addActionListener(e -> analyzeProductPerformance());
+        btnAdjustPrices.addActionListener(e -> adjustProductPrices());
+    }
+
+    private void populateTable() {
+        DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(new Object[]{"Product", "Floor Price", "Ceiling Price", "Target Price"});
+        for (Product product : supplier.getProductCatalog().getProducts()) {
+            model.addRow(new Object[]{product.getName(), product.getFloorPrice(), product.getCeilingPrice(), product.getTargetPrice()});
+        }
+        tableProduct.setModel(model);
+    }
+
+    private void analyzeProductPerformance() {
+        JOptionPane.showMessageDialog(this, "Analyzing product performance...");
+    }
+
+    private void adjustProductPrices() {
+        for (Product product : supplier.getProductCatalog().getProducts()) {
+            if (product.getSalesVolume() < product.getTargetPrice()) {
+                product.adjustTargetPrice(false); // Decrease target price
+            } else {
+                product.adjustTargetPrice(true); // Increase target price
+            }
+        }
+        populateTable();
+    }
+
+
     /**
      * Creates new form ProductManagementJPanel
      */
-     JPanel userProcessContainer;
-    SupplierDirectory supplierDirectory;
 
-    public ProductManagementJPanel(JPanel container, SupplierDirectory directory) {
-       // Set a layout if needed
-        initComponents();
-         
-        userProcessContainer = container;
-        supplierDirectory = directory;
-        
-        
-        populateTable();
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,27 +133,9 @@ public class ProductManagementJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-private void populateTable() {
-    DefaultTableModel model = (DefaultTableModel) tableProduct.getModel();
-    model.setRowCount(0); // Clear existing rows if any
 
-    // Populate the table with supplier and product data
-    for (Supplier supplier : supplierDirectory.getSuplierList()) {
-        for (Product product : supplier.getProductCatalog().getProducts()) {
-            Object[] row = new Object[5];
-            row[0] = supplier.getName(); // Supplier name
-            row[1] = product; // Assuming Product overrides toString() to show product name
-            row[2] = product.getFloorPrice(); // Floor Price
-            row[3] = product.getCeilingPrice(); // Ceiling Price
-            row[4] = product.getTargetPrice(); // Target Price
-
-            model.addRow(row);
-        }
-    }
-}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableProduct;
     // End of variables declaration//GEN-END:variables
-
 }

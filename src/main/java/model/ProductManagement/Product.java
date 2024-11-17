@@ -128,4 +128,8 @@ public class Product {
         return String.format("Product: %s | Target Price: %d | Floor Price: %d | Ceiling Price: %d | Sales Volume: %d",
                 name, targetPrice, floorPrice, ceilingPrice, getSalesVolume());
     }
+
+    public Object getName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
