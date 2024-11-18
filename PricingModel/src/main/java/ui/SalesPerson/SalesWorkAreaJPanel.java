@@ -12,7 +12,7 @@ import java.awt.*;
 
 /**
  *
- * @author jahnavipatel
+ * @author DELL
  */
 public class SalesWorkAreaJPanel extends javax.swing.JPanel {
 
