@@ -18,7 +18,7 @@ import model.ProductManagement.Product;
 import model.ProductManagement.ProductSummary;
 
 /**
- * @author jahnavipatel
+ * @author LENOVO
  */
 public class ManageSuppliersJPanel extends javax.swing.JPanel {
 

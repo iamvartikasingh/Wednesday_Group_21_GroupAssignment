@@ -6,8 +6,7 @@ package ui;
 
 import model.Business.Business;
 import model.Business.ConfigureABusiness;
-import model.UserAccountManagement.UserAccount;
-import model.UserAccountManagement.UserAccountDirectory;
+
 import ui.SalesPerson.SalesWorkAreaJPanel;
 
 import javax.swing.*;
@@ -19,6 +18,7 @@ import ui.Marketing.MarketingHomeJPanel;
  * @author DELL
  */
 public class MainJFrame extends javax.swing.JFrame {
+
 
     /**
      * Creates new form MainJFrame
@@ -43,12 +43,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jSplitPane1 = new javax.swing.JSplitPane();
         CardSequencePanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        Login = new javax.swing.JLabel();
-        txtUserName = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,78 +58,41 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
-        jLabel1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Admin Username");
-
-        jLabel2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Password");
-
-        Login.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Login.setText("Login");
-
-        txtUserName.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        txtUserName.setText("sam");
-
-        txtPassword.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        txtPassword.setText("sam123");
-
-        btnLogin.setBackground(new java.awt.Color(0, 102, 102));
-        btnLogin.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnLogin.setBackground(new java.awt.Color(0, 153, 153));
+        btnLogin.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogin.setText("Login");
+        btnLogin.setText("Start");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jLabel1.setText("Welcome to Pricing Model");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                                .addComponent(txtUserName, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(33, 33, 33))))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(Login)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, jLabel2});
 
         jSplitPane1.setLeftComponent(jPanel2);
 
@@ -153,26 +112,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        String userName = txtUserName.getText();
-        String password = txtPassword.getText();
-        UserAccount userAccount =  business.getUserAccountDirectory().AuthenticateUser(userName, password);
-        if(userAccount == null) {
-            JOptionPane.showMessageDialog(this, "Invalid Credentials");
-        }
-        else {
-            if(userAccount.getRole().equals("Sales")) {
-                SalesWorkAreaJPanel salesJPanel = new SalesWorkAreaJPanel(CardSequencePanel, business, userAccount);
-                CardSequencePanel.add("SalesWorkAreaJPanel", salesJPanel);
-                CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
-                layout.next(CardSequencePanel);
-            }
-            if(userAccount.getRole().equals("Marketing")) {
-                MarketingHomeJPanel marketingHomeJPanel = new MarketingHomeJPanel(CardSequencePanel, business, userAccount);
+        MarketingHomeJPanel marketingHomeJPanel = new MarketingHomeJPanel(CardSequencePanel, business);
                 CardSequencePanel.add("MarketingHomeJPanel", marketingHomeJPanel);
                 CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
                 layout.next(CardSequencePanel);
-            }
-        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
@@ -212,13 +155,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CardSequencePanel;
-    private javax.swing.JLabel Login;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }
