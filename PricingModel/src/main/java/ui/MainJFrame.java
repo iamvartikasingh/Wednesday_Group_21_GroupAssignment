@@ -16,7 +16,7 @@ import ui.Marketing.MarketingHomeJPanel;
 
 /**
  *
- * @author jahnavipatel
+ * @author DELL
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -178,10 +178,10 @@ public class MainJFrame extends javax.swing.JFrame {
                 layout.next(CardSequencePanel);
             }
             if(userAccount.getRole().equals("Marketing")) {
-                MarketingHomeJPanel marketingHomeJPanel = new MarketingHomeJPanel(CardSequencePanel, business, userAccount);
-                CardSequencePanel.add("MarketingHomeJPanel", marketingHomeJPanel);
-                CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
-                layout.next(CardSequencePanel);
+                // MarketingHomeJPanel marketingHomeJPanel = new MarketingHomeJPanel(CardSequencePanel, business, userAccount);
+                // CardSequencePanel.add("MarketingHomeJPanel", marketingHomeJPanel);
+                // CardLayout layout = (CardLayout) CardSequencePanel.getLayout();
+                // layout.next(CardSequencePanel);
             }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
