@@ -25,81 +25,80 @@ public class ConfigureABusiness {
         Business business = new Business("Xerox");
 
         //Supplier 1 - Samsung
-        Supplier supplier1 = business.getSupplierDirectory().newSupplier("Samsung");
+        Supplier supplier1 = business.getSupplierDirectory().newSupplier("PrintMasters Inc.");
         ProductCatalog productCatalog1 = supplier1.getProductCatalog();
-        //newProduct(String n, int fp, int cp, int tp)
-        Product product1 = productCatalog1.newProduct("Galaxy S21", 900, 2000, 1450);
-        Product product2 = productCatalog1.newProduct("Galaxy S20", 1000, 2100, 1550);
-        Product product3 = productCatalog1.newProduct("Galaxy S10", 800, 1800, 1300);
-        Product product4 = productCatalog1.newProduct("Galaxy S9", 850, 1900, 1375);
-        Product product5 = productCatalog1.newProduct("Galaxy S8", 750, 1700, 1225);
-        Product product6 = productCatalog1.newProduct("Galaxy S7", 770, 1750, 1260);
-        Product product7 = productCatalog1.newProduct("Galaxy S6", 700, 1600, 1150);
-        Product product8 = productCatalog1.newProduct("Galaxy S5", 720, 1650, 1185);
-        Product product9 = productCatalog1.newProduct("Galaxy S4", 600, 1400, 1000);
-        Product product10 = productCatalog1.newProduct("Galaxy S3", 610, 1450, 1030);
+        // newProduct(String n, int fp, int cp, int tp)
+        Product product1 = productCatalog1.newProduct("LaserJet Pro 500 Cartridges", 900, 2000, 1450);
+        Product product2 = productCatalog1.newProduct("ColorSync Toner Pack", 1000, 2100, 1550);
+        Product product3 = productCatalog1.newProduct("PhotoGloss Paper 8.5x11", 800, 1800, 1300);
+        Product product4 = productCatalog1.newProduct("Office Essentials Copy Paper", 850, 1900, 1375);
+        Product product5 = productCatalog1.newProduct("High-Yield Black Ink", 750, 1700, 1225);
+        Product product6 = productCatalog1.newProduct("Premium Business Cards Stock", 770, 1750, 1260);
+        Product product7 = productCatalog1.newProduct("Advanced Print Head Cleaner", 700, 1600, 1150);
+        Product product8 = productCatalog1.newProduct("Wide-Format Plotter Paper", 720, 1650, 1185);
+        Product product9 = productCatalog1.newProduct("Document Lamination Sheets", 600, 1400, 1000);
+        Product product10 = productCatalog1.newProduct("QuickBind Plastic Comb Binders", 610, 1450, 1030);
         business.getSupplierPerformanceReport(String.valueOf(supplier1));
 
-        //Supplier 2 - Apple
-        Supplier supplier2 = business.getSupplierDirectory().newSupplier("Apple");
+        // Supplier 2 - Apple
+        Supplier supplier2 = business.getSupplierDirectory().newSupplier("OfficeSupplies Hub");
         ProductCatalog productCatalog2 = supplier2.getProductCatalog();
-        Product product11 = productCatalog2.newProduct("iPhone 12", 1100, 2400, 1750);
-        Product product12 = productCatalog2.newProduct("iPhone 11", 950, 2300, 1625);
-        Product product13 = productCatalog2.newProduct("iPhone X", 850, 2200, 1525);
-        Product product14 = productCatalog2.newProduct("iPhone 8", 800, 2100, 1450);
-        Product product15 = productCatalog2.newProduct("iPhone 7", 750, 2000, 1375);
-        Product product16 = productCatalog2.newProduct("iPhone 6", 700, 1900, 1300);
-        Product product17 = productCatalog2.newProduct("iPhone 5", 600, 1800, 1200);
-        Product product18 = productCatalog2.newProduct("iPhone 4", 550, 1700, 1125);
-        Product product19 = productCatalog2.newProduct("iPhone 3", 500, 1600, 1050);
-        Product product20 = productCatalog2.newProduct("iPhone 2", 480, 1550, 1015);
+        Product product11 = productCatalog2.newProduct("Standard Copy Paper Ream", 1100, 2400, 1750);
+        Product product12 = productCatalog2.newProduct("Glossy Presentation Paper", 950, 2300, 1625);
+        Product product13 = productCatalog2.newProduct("Eco-Friendly Toner Cartridges", 850, 2200, 1525);
+        Product product14 = productCatalog2.newProduct("Multi-Purpose Printer Ink", 800, 2100, 1450);
+        Product product15 = productCatalog2.newProduct("Photo Matte Paper 5x7", 750, 2000, 1375);
+        Product product16 = productCatalog2.newProduct("Large Capacity Ink Tanks", 700, 1900, 1300);
+        Product product17 = productCatalog2.newProduct("Binding Machine Supplies", 600, 1800, 1200);
+        Product product18 = productCatalog2.newProduct("Premium Envelopes 9x12", 550, 1700, 1125);
+        Product product19 = productCatalog2.newProduct("Label Sheets (A4)", 500, 1600, 1050);
+        Product product20 = productCatalog2.newProduct("Thermal Transfer Ribbon", 480, 1550, 1015);
         business.getSupplierPerformanceReport(String.valueOf(supplier2));
 
-        //Supplier 3 - Google
-        Supplier supplier3 = business.getSupplierDirectory().newSupplier("Google");
+        // Supplier 3 - Google
+        Supplier supplier3 = business.getSupplierDirectory().newSupplier("EcoPrint Solutions");
         ProductCatalog productCatalog3 = supplier3.getProductCatalog();
-        Product product21 = productCatalog3.newProduct("Pixel 5", 1000, 2000, 1500);
-        Product product22 = productCatalog3.newProduct("Pixel 4", 950, 1950, 1450);
-        Product product23 = productCatalog3.newProduct("Pixel 3", 870, 1900, 1385);
-        Product product24 = productCatalog3.newProduct("Pixel 2", 830, 1850, 1340);
-        Product product25 = productCatalog3.newProduct("Pixel 1", 790, 1800, 1295);
-        Product product26 = productCatalog3.newProduct("Nexus 6P", 740, 1750, 1245);
-        Product product27 = productCatalog3.newProduct("Nexus 5X", 690, 1700, 1195);
-        Product product28 = productCatalog3.newProduct("Nexus 5", 650, 1650, 1150);
-        Product product29 = productCatalog3.newProduct("Nexus 4", 600, 1600, 1100);
-        Product product30 = productCatalog3.newProduct("Nexus 3", 580, 1550, 1065);
+        Product product21 = productCatalog3.newProduct("Recycled Paper Packs", 1000, 2000, 1500);
+        Product product22 = productCatalog3.newProduct("Eco-Safe Black Ink Cartridge", 950, 1950, 1450);
+        Product product23 = productCatalog3.newProduct("Sustainable Toner Refills", 870, 1900, 1385);
+        Product product24 = productCatalog3.newProduct("Plant-Based Printing Sheets", 830, 1850, 1340);
+        Product product25 = productCatalog3.newProduct("Waterproof Labels", 790, 1800, 1295);
+        Product product26 = productCatalog3.newProduct("Energy-Efficient Printer Kits", 740, 1750, 1245);
+        Product product27 = productCatalog3.newProduct("Low-Waste Ribbon Cassettes", 690, 1700, 1195);
+        Product product28 = productCatalog3.newProduct("Custom Stationery Stock", 650, 1650, 1150);
+        Product product29 = productCatalog3.newProduct("Xerographic Developer Kits", 600, 1600, 1100);
+        Product product30 = productCatalog3.newProduct("Eco-Friendly Highlighter Pens", 580, 1550, 1065);
         business.getSupplierPerformanceReport(String.valueOf(supplier3));
 
-        //Supplier 4 - OnePlus
-        Supplier supplier4 = business.getSupplierDirectory().newSupplier("OnePlus");
+        // Supplier 4 - OnePlus
+        Supplier supplier4 = business.getSupplierDirectory().newSupplier("ProPrint Supplies");
         ProductCatalog productCatalog4 = supplier4.getProductCatalog();
-        Product product31 = productCatalog4.newProduct("OnePlus 9", 1000, 2000, 1500);
-        Product product32 = productCatalog4.newProduct("OnePlus 8", 950, 1950, 1450);
-        Product product33 = productCatalog4.newProduct("OnePlus 7", 875, 1940, 1385);
-        Product product34 = productCatalog4.newProduct("OnePlus 6", 833, 1850, 1340);
-        Product product35 = productCatalog4.newProduct("OnePlus 5", 790, 1800, 1295);
-        Product product36 = productCatalog4.newProduct("OnePlus 4", 740, 1750, 1245);
-        Product product37 = productCatalog4.newProduct("OnePlus 3", 690, 1700, 1195);
-        Product product38 = productCatalog4.newProduct("OnePlus 2", 650, 1650, 1150);
-        Product product39 = productCatalog4.newProduct("OnePlus 1", 600, 1600, 1100);
-        Product product40 = productCatalog4.newProduct("OnePlus 0", 580, 1550, 1065);
+        Product product31 = productCatalog4.newProduct("Heavy-Duty Stapler Refill Kits", 1000, 2000, 1500);
+        Product product32 = productCatalog4.newProduct("Photo Printing Sheets (A3)", 950, 1950, 1450);
+        Product product33 = productCatalog4.newProduct("Color Laser Toner Set", 875, 1940, 1385);
+        Product product34 = productCatalog4.newProduct("Premium Glossy Film Roll", 833, 1850, 1340);
+        Product product35 = productCatalog4.newProduct("Document Folder Labels", 790, 1800, 1295);
+        Product product36 = productCatalog4.newProduct("Compact Printer Lubricant", 740, 1750, 1245);
+        Product product37 = productCatalog4.newProduct("Archival Quality Paper", 690, 1700, 1195);
+        Product product38 = productCatalog4.newProduct("Wide-Format Canvas Roll", 650, 1650, 1150);
+        Product product39 = productCatalog4.newProduct("Print Calibration Tools", 600, 1600, 1100);
+        Product product40 = productCatalog4.newProduct("Secure Paper Shredder Bags", 580, 1550, 1065);
         business.getSupplierPerformanceReport(String.valueOf(supplier4));
 
-        //Supplier 5 - Xiaomi
-        Supplier supplier5 = business.getSupplierDirectory().newSupplier("Xiaomi");
+        // Supplier 5 - Xiaomi
+        Supplier supplier5 = business.getSupplierDirectory().newSupplier("All-In-One Printers Ltd");
         ProductCatalog productCatalog5 = supplier5.getProductCatalog();
-        Product product41 = productCatalog5.newProduct("Mi 11", 1000, 2000, 1500);
-        Product product42 = productCatalog5.newProduct("Mi 10", 950, 1950, 1450);
-        Product product43 = productCatalog5.newProduct("Mi 9", 875, 1940, 1385);
-        Product product44 = productCatalog5.newProduct("Mi 8", 833, 1850, 1340);
-        Product product45 = productCatalog5.newProduct("Mi 7", 790, 1800, 1295);
-        Product product46 = productCatalog5.newProduct("Mi 6", 740, 1750, 1245);
-        Product product47 = productCatalog5.newProduct("Mi 5", 690, 1700, 1195);
-        Product product48 = productCatalog5.newProduct("Mi 4", 650, 1650, 1150);
-        Product product49 = productCatalog5.newProduct("Mi 3", 600, 1600, 1100);
-        Product product50 = productCatalog5.newProduct("Mi 2", 580, 1550, 1065);
+        Product product41 = productCatalog5.newProduct("All-Purpose Copy Paper", 1000, 2000, 1500);
+        Product product42 = productCatalog5.newProduct("Photo Paper Premium Pack", 950, 1950, 1450);
+        Product product43 = productCatalog5.newProduct("Monochrome Toner Cartridge", 875, 1940, 1385);
+        Product product44 = productCatalog5.newProduct("Refillable Ink Bottles", 833, 1850, 1340);
+        Product product45 = productCatalog5.newProduct("High-Resolution Scan Films", 790, 1800, 1295);
+        Product product46 = productCatalog5.newProduct("Presentation Binder Clips", 740, 1750, 1245);
+        Product product47 = productCatalog5.newProduct("Advanced Cleaning Cartridge", 690, 1700, 1195);
+        Product product48 = productCatalog5.newProduct("Print Alignment Sheets", 650, 1650, 1150);
+        Product product49 = productCatalog5.newProduct("Borderless Printing Roll", 600, 1600, 1100);
+        Product product50 = productCatalog5.newProduct("Custom Die-Cut Labels", 580, 1550, 1065);
         business.getSupplierPerformanceReport(String.valueOf(supplier5));
-
 
         //TOdo: Add more suppliers and products later
         //Customer 1 - John
@@ -277,7 +276,6 @@ public class ConfigureABusiness {
         OrderItem orderItem58 = order20.newOrderItem(product40, 1010, 1); // Above target
         OrderItem orderItem59 = order20.newOrderItem(product50, 400, 1); // Above target
         OrderItem orderItem60 = order20.newOrderItem(product10, 1250, 1); // Below target
-        
 
         return business;
     }
